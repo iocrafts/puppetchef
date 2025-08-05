@@ -5,11 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.0.4] - 2025-08-04
+
+### Fixed
+- **Dockerfile**: Fixed issue with workdir not owned by the node user.
+
 ## [4.0.3] - 2025-08-04
 
 ### Changed
 - **Update Dependencies**: Upgraded project dependencies to their latest stable versions to ensure compatibility, security, and improved performance.
--  **Update Dockerfile**: Upgraded node version.
+- **Update Dockerfile**: Upgraded node version.
 
 ## [4.0.2] - 2025-06-03
 

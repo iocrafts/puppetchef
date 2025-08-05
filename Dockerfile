@@ -7,8 +7,8 @@ RUN apt-get update && apt-get install gnupg wget -y && \
   apt-get install google-chrome-stable -y --no-install-recommends && \
   rm -rf /var/lib/apt/lists/*
 
-
 WORKDIR /app
+RUN chown node:node /app
 COPY --chown=node:node . .
 
 USER node
