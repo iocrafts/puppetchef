@@ -9,9 +9,10 @@ RUN apt-get update && apt-get install gnupg wget -y && \
 
 WORKDIR /app
 RUN chown node:node /app
-COPY --chown=node:node . .
+COPY --chown=node:node . ./puppetchef/
 
 USER node
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
-RUN npm install --only=production && \
+RUN npm install --only=production ./puppetchef && \
     npm prune --production
+ENV PATH="/app/node_modules/.bin:${PATH}"
