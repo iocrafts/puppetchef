@@ -1,6 +1,17 @@
 name: Run tests and lint
 
-on: [workflow_dispatch, workflow_call, pull_request]
+on: 
+  workflow_dispatch:
+  workflow_call:
+  pull_request:
+    paths-ignore:
+      - '**/*.md'
+      - 'Dockerfile'
+      - '**/Dockerfile'
+      - '**/*ignore'
+      - 'puppetchefrc'
+      - 'puppetchefrc.linux'
+      - 'LICENSE'
 
 permissions:
   contents: read
